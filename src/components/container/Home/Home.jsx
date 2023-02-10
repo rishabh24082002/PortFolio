@@ -1,5 +1,5 @@
 import React from 'react'
-import portfolio from "../../../assets/portfolio.jpg"
+import ProfilePic from "../../../assets/ProfilePic.jpeg"
 import "./Home.scss"
 import { motion } from 'framer-motion'
 
@@ -30,16 +30,16 @@ const Home = () => {
       }
     >
       <div className="profile">
-        <img src={portfolio} alt="portfolio" />
+        <img src={ProfilePic} alt="portfolio" />
       </div>
       <div className="profile_text">
-        <h3 className='name'>Hi, I'm <span>Abee Zarar</span> </h3>
-        <span className='job'>Web Developer Based on Myanmar</span>
-        <span className='text'>Passionate<br /> to craft innovative <br />  web products.</span>
+        <h3 className='name'>Hi, I'm <span>Rishabh Nigam</span> </h3>
+        <span className='job'>Full Stack Developer</span>
+        <span className='text'>Passionate<br /> to create innovative <br />  web applications.</span>
         <motion.a
           href="#contact"
           whileHover={{ scale: 1.1 }}
-          variants={moveVariants}
+          variants={moveVariants} 
           animate="animation"
         >
           connect with me</motion.a>
@@ -52,12 +52,12 @@ const Home = () => {
         <div
           className="ui"
         >
-          UI/UX Designer
+          Problem Solver
         </div>
         <div
           className="freelance"
         >
-          Freelancer
+          Coder
         </div>
       </div>
     </motion.div>

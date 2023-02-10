@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import "./Skills.scss";
 import { icons } from '../../../Data';
-import { experiences } from '../../../Data';
-import { finishes } from '../../../Data';
+import { educations } from '../../../Data';
+// import { finishes } from '../../../Data';
 import { motion } from 'framer-motion';
 const Skills = () => {
   const [active, setActive] = useState(1)
@@ -14,7 +14,7 @@ const Skills = () => {
         className="title"
       >
         <span>What I Expert?</span>
-        <h1>Skills And Experience</h1>
+        <h1>Skills And Education</h1>
       </motion.div>
       <motion.div
         initial={{opacity: 0}}
@@ -27,7 +27,7 @@ const Skills = () => {
         <button
           onClick={() => setActive(2)}
           className={active === 2 ? "active" : ""}
-        >Experiences</button>
+        >Education</button>
       </motion.div>
       <motion.div
         initial={{opacity: 0}}
@@ -45,21 +45,21 @@ const Skills = () => {
       <motion.div
         initial={{opacity: 0}}
         whileInView={{y: [-50, 0], opacity: 1}}
-        className="experiencs"
+        className="educations"
       >
-        {active === 2 && experiences.map(experience => {
+        {active === 2 && educations.map(education => {
           return (
-            <div className="experience" key={experience.id}>
-              <span>{experience.year}</span>
+            <div className="education" key={education.id}>
+              <span>{education.year}</span>
               <div className="position">
-                <h3>{experience.position}</h3>
-                <p>{experience.company}</p>
+                <h3>{education.position}</h3>
+                <p>{education.company}</p>
               </div>
             </div>
           )
         })}
         </motion.div>
-      <motion.div
+      {/* <motion.div
         initial={{opacity: 0}}
         whileInView={{y: [-50, 0], opacity: 1}}
         className="finishes_container"
@@ -72,7 +72,7 @@ const Skills = () => {
           </div>
           )
         })}
-      </motion.div>
+      </motion.div> */}
     </div>
   )
 }

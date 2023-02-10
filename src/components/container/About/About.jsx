@@ -1,9 +1,10 @@
 import React from 'react'
 import "./About.scss";
+import resume from '../../../assets/Rishabh_Resume_2023.pdf'
 
 import { motion } from 'framer-motion';
 import { bios } from '../../../Data';
-import portfolio from "../../../assets/portfolio.jpg"
+import ProfilePic from "../../../assets/ProfilePic.jpeg"
 const About = () => {
 
 
@@ -23,7 +24,7 @@ const About = () => {
           whileInView={{ x: [-250, 0], opacity: 1 }}
           transition={{ duration: 1 }}
           className="about_left">
-          <motion.img src={portfolio}
+          <motion.img src={ProfilePic}
             whileHover={{ y: -48, x: -55 }}
             transition={{ duration: 0.3 }}
           />
@@ -34,7 +35,9 @@ const About = () => {
           transition={{ duration: 1 }}
         >
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae at rem, tenetur ad ipsa sequi, optio eius laudantium vero minus maxime laborum est et nemo consequatur nostrum distinctio sed, nulla doloribus officiis ea eligendi explicabo.</p>
+          <p>I am a MERN FULL STACK DEVELOPER💻 , I have in depth knowledge of HTML5, CSS3, Vanilla JavaScript, React.js, Node.js, Express.js, MongoDB and Git.
+
+I am good at Data Structures and Algorithms. I am interested in devising a better problem solving method for challenging tasks.</p>
           {bios.map(bio => {
             return (
               <div className="bio" key={bio.id}>
@@ -43,7 +46,7 @@ const About = () => {
               </div>
             )
           })}
-          <motion.a href='#' download=""
+          <motion.a href={resume} download="resume"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
